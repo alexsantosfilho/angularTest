@@ -15,9 +15,12 @@ export class ObservableDemoComponent implements OnInit {
     private finished: boolean;
 
     mathform: FormGroup;
-    inputnumber :FormControl
+    inputnumber: FormControl;
     squaredata:number;
-    processed=false;
+    processed = false;
+    apple = false;
+    mango = false;
+    orannge = false;
 
     constructor(private fb: FormBuilder) {
 
@@ -27,8 +30,8 @@ export class ObservableDemoComponent implements OnInit {
         inputnumber:this.inputnumber
     })
 
-    this.inputnumber.valueChanges.map(n=>n*n)
-    .subscribe(power=>this.squaredata=power);
+        this.inputnumber.valueChanges.map(n=>n*n)
+        .subscribe(power=>this.squaredata=power);
 
 };
 ngOnInit(){
@@ -42,15 +45,18 @@ start(){
         setTimeout(() => 
         {
             observer.next('Apple');
+            this.apple = true;
             }, 1000);
             
             setTimeout(() => 
             {
                 observer.next('mango');
+                this.mango = true;
             }, 2000);
             setTimeout(() => 
             {
                 observer.next('Orannge');
+                this.orannge = true;
             }, 3000);
             setTimeout(() => 
             {
@@ -64,8 +70,7 @@ start(){
 );
 
 let subscription = this.data.
-subscribe(
-    fruit => this.fruits.push(fruit),
+subscribe(fruit => this.fruits.push(fruit),
     error => this.anyErrors = true,
     () => this.finished = true
 );
