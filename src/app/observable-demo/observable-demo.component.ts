@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs/Observable'
 import {FormControl, FormGroup, FormBuilder} from '@angular/forms';
@@ -15,7 +14,6 @@ export class ObservableDemoComponent implements OnInit {
     private anyErrors: boolean;
     private finished: boolean;
 
-
     mathform: FormGroup;
     inputnumber :FormControl
     squaredata:number;
@@ -25,11 +23,9 @@ export class ObservableDemoComponent implements OnInit {
 
         this.inputnumber=new FormControl();
 
-
         this.mathform = fb.group({
         inputnumber:this.inputnumber
     })
-
 
     this.inputnumber.valueChanges.map(n=>n*n)
     .subscribe(power=>this.squaredata=power);
