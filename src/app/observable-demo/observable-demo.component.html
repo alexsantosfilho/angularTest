@@ -1,0 +1,29 @@
+<p style="padding-left:300px;font-weight:bold;font-size: 50px">Observable Basics</p>
+<hr/>
+<b>Observable Data</b>
+<div style="border: 3px;padding-left:150px;"text-align: *ngFor="let f of fruits"> {{ f | uppercase }}</div>
+<hr>
+<div *ngIf='anyErros' style="border:3 px;padding-left: 0px" >
+    <b> Error status: </b>
+
+    {{anyErros==true? 'Error occured': ' It All Good' }}
+
+    <hr>
+</div>
+
+<div style="border: 3px;padding-left: 0px"> <b> completion status</b>{{ finished== true? ' Observer comleted ': ''}}</div>
+
+<hr>
+
+<h1>
+
+    <form [formGroup]= "mathform">
+
+<input formControlName="inputnumber">
+    </form>
+    <hr>
+    <div>
+        Squere of the number is :: <b>{{squeredata}}</b>
+    </div>
+
+</h1>

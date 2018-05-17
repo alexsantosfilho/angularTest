@@ -1,18 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {ReactiveFormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
-import { Cursos2Component } from './cursos2/cursos2.component';
+import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
+import { FormArray } from '@angular/forms/src/model';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    Cursos2Component
+    ObservableDemoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
