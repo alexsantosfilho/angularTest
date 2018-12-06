@@ -1,5 +1,7 @@
 # Primeiro
 
+[![Build Status](https://travis-ci.org/alexsantosfilho/angularTest.svg?branch=master)](https://travis-ci.org/alexsantosfilho/angularTesta)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
 
 ## Development server
