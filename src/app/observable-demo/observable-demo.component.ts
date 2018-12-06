@@ -10,13 +10,13 @@ import 'rxjs/add/operator/map';
 })
 export class ObservableDemoComponent implements OnInit {
     private data: Observable<string>;
-    private fruits: Array<string> = [];
-    private anyErrors: boolean;
-    private finished: boolean;
+    fruits: Array<string> = [];
+    anyErrors: boolean;
+    finished: boolean;
 
     mathform: FormGroup;
     inputnumber: FormControl;
-    squaredata:number;
+    squaredata: number;
     processed = false;
     apple = false;
     mango = false;
@@ -24,10 +24,10 @@ export class ObservableDemoComponent implements OnInit {
 
     constructor(private fb: FormBuilder) {
 
-        this.inputnumber=new FormControl();
+        this.inputnumber = new FormControl();
 
         this.mathform = fb.group({
-        inputnumber:this.inputnumber
+        inputnumber : this.inputnumber
     })
 
         this.inputnumber.valueChanges.map(n=>n*n)
